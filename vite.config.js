@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 
 export default defineConfig({
   plugins: [vue(), terser(), cssnano(),
-  compression({
+  /*compression({
     ext: '.br, .js, .css, .html, .svg',
     threshold: 10240,
     gzip: {
@@ -18,5 +18,6 @@ export default defineConfig({
     brotli: {
       quality: 11,
     },
-  })]
+  })*/],
+  base: "/clima/",
 })
