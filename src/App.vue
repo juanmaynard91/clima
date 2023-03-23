@@ -52,7 +52,7 @@ const url = ref("https://api.openweathermap.org/data/2.5/");
 const buscar = ref("");
 const weather = ref({});
 const videoRef = ref(null);
-const videoSrc = ref("../src/assets/background.mp4");
+const videoSrc = ref("../src/assets/video/background.mp4");
 
 const fetchClima = async () => {
   try {
@@ -87,22 +87,22 @@ const fecha = () => {
 
 const iconoClima = computed(() => {
   if (weather.value.weather[0].main === "Clear") {
-    return "../src/assets/iconosClima/soleado.png";
+    return "../src/assets/iconos/soleado.png";
   }
   if (weather.value.weather[0].main === "Clouds") {
-    return "../src/assets/iconosClima/nublado.png";
+    return "../src/assets/iconos/nublado.png";
   }
   if (weather.value.weather[0].main === "Rain") {
-    return "../src/assets/iconosClima/lluvia.png";
+    return "../src/assets/iconos/lluvia.png";
   }
   if (weather.value.weather[0].main === "Storm") {
-    return "../src/assets/iconosClima/tormenta.png";
+    return "../src/assets/iconos/tormenta.png";
   }
   if (
     weather.value.weather[0].main === "Fog" ||
     weather.value.weather[0].main === "Mist"
   ) {
-    return "../src/assets/iconosClima/niebla.png";
+    return "../src/assets/iconos/niebla.png";
   }
 });
 
