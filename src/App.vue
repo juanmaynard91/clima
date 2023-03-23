@@ -1,6 +1,6 @@
 <template>
   <section class="video-container">
-    <video autoplay loop muted playsinline prefetch preload="auto" loading="lazy" :src="videoSrc" ref="videoRef"></video>
+    <video autoplay loop muted playsinline prefetch preload="auto" loading="lazy" src="../src/assets/video/background.mp4" ref="videoRef"></video>
   </section>
 
   <header>
@@ -45,14 +45,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from "vue";
+import { ref, computed } from "vue";
 
 const key = ref("333d98cc99af02c7246da1e7ff0fdd56");
 const url = ref("https://api.openweathermap.org/data/2.5/");
 const buscar = ref("");
 const weather = ref({});
 const videoRef = ref(null);
-const videoSrc = ref("../src/assets/video/background.mp4");
+//const videoSrc = ref("../src/assets/video/background.mp4");
 
 const fetchClima = async () => {
   try {
@@ -106,12 +106,12 @@ const iconoClima = computed(() => {
   }
 });
 
-onMounted(() => {
+/*onMounted(() => {
   const cargarVideo = videoRef.value;
   // el 1 es por la velocidad del video (mas rapido)
   videoRef.value.playbackRate = 1;
   cargarVideo.load();
-});
+});*/
 </script>
 
 <style>
