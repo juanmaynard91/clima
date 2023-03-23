@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import compression from 'vite-plugin-compression';
+//import compression from 'vite-plugin-compression';
 import cssnano from 'cssnano';
 import { terser } from 'rollup-plugin-terser';
 
