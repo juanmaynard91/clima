@@ -1,6 +1,6 @@
 <template>
   <section class="video-container">
-    <video autoplay loop muted playsinline prefetch preload="auto" loading="lazy" src="../src/assets/video/background.mp4" ref="videoRef"></video>
+    <video autoplay loop muted playsinline prefetch preload="auto" loading="lazy" ref="videoRef" src="../src/assets/video/background.mp4"></video>
   </section>
 
   <header>
@@ -28,8 +28,8 @@
 
         <div class="weather-box">
           <div class="temp">{{ Math.round(weather.main.temp) }}°c</div>
-          <div class="weather">{{ weather.weather[0].description }}</div>
-          <img :src="iconoClima" :alt="weather.weather[0].main" loading="lazy" />
+          <div class="weather">{{ weather.weather[0].main }}</div>
+          <!--<img :src="iconoClima" :alt="weather.weather[0].main" loading="lazy" />-->
         </div>
       </div>
     </transition>
@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref } from "vue";
 
 const key = ref("333d98cc99af02c7246da1e7ff0fdd56");
 const url = ref("https://api.openweathermap.org/data/2.5/");
@@ -85,7 +85,7 @@ const fecha = () => {
   return `${day} ${date} ${month} ${year}`;
 };
 
-const iconoClima = computed(() => {
+/*const iconoClima = computed(() => {
   if (weather.value.weather[0].main === "Clear") {
     return "../src/assets/iconos/soleado.png";
   }
@@ -104,7 +104,7 @@ const iconoClima = computed(() => {
   ) {
     return "../src/assets/iconos/niebla.png";
   }
-});
+});*/
 
 /*onMounted(() => {
   const cargarVideo = videoRef.value;
