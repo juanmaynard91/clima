@@ -37,9 +37,9 @@
 
   <footer>
     <div class="social-links text-focus-in">
-      <a href="https://www.linkedin.com/in/juan-maynard/" target="_blank" class="footer__icon"><i class="bx bxl-linkedin-square"></i></a>
-      <a href="https://github.com/juanmaynard91" target="_blank" class="footer__icon"><i class="bx bxl-github"></i></a>
-      <a href="https://wa.me/5492494577897" target="_blank" class="footer__icon"><i class="bx bxl-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/juan-maynard/" target="_blank" class="footer__icon"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/juanmaynard91" target="_blank" class="footer__icon"><i class="bi bi-github"></i></a>
+      <a href="https://wa.me/5492494577897" target="_blank" class="footer__icon"><i class="bi bi-whatsapp"></i></a>
     </div>
   </footer>
 </template>
